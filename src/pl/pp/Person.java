@@ -1,61 +1,58 @@
 package pl.pp;
 
 public class Person {
-    // Pola (atrybuty) klasy określającej obiekt "Person"
-    private String forename; // Imię
-    private String surname; // Nazwisko
-    public int age; // Wiek
-    public String address; // Adres
-    public int birthYear; // Rok urodzenia
+    // pola (atrybuty) klasy określającej obiekt "Person" (jego parametry/cechy)
+    private String forename; // pole przechowujące cechę imię
+    private String surname; // pole przechowujące cechę nazwisko
+    private int age; // pole przechowujące cechę wiek
 
-    // Konstruktor domyślny
+    /**
+     * Konstruktor domyślny - element inicjalizujący pola obiektu podczas jego tworzenia
+     * (jeśli sami nie podamy żadnych parametrów)
+     */
     public Person() {
-        this.forename = "";
-        this.surname = "";
-        this.age = 0;
-        this.address = "";
-        this.birthYear = 0;
+
     }
 
-    // Konstruktor z pięcioma parametrami
-    public Person(String initForename, String initSurname, int initAge, String initAddress, int initBirthYear) {
-        this.forename = initForename;
-        this.surname = initSurname;
-        this.age = initAge;
-        this.address = initAddress;
-        this.birthYear = initBirthYear;
+    /**
+     * Konstruktor z trzema parametrami, które możemy podać przy jego tworzeniu,
+     * wykorzystanie "this" pozwala m.in. na skorzystanie z tych samych nazw
+     * pól i zmiennych
+     */
+    public Person(String forename, String surname, int age) {
+        this.forename = forename;
+        this.surname = surname;
+        this.age = age;
     }
 
-    // Metoda do powitania
-    public void hiToAll() {
-        System.out.println("Cześć, jestem " + forename + " " + surname + ", mam " + age + " lat.");
-        System.out.println("Mieszkam w " + address + " i urodziłem się w " + birthYear + ".");
+    // metody klasy określające akcje możliwe do wykonania przez obiekt
+    public void hiToAll(){
+        System.out.println("Nazywam się " + forename + " " + surname + ". " + "Mam " + age + " lat.");
     }
 
-    // Metoda do zwiększania wieku
-    public void growOld(int years) {
-        this.age += years; // Zwiększa wiek o wartość argumentu
+    // przykładowa metoda growOld, która zwiększa dany wiek obiektu o jeden za każdym jej wywołaniem
+    public int growOld(int age){
+        this.age += age;
+        return age;
     }
 
-    // Metoda do zmniejszania wieku
-    public void beYounger() {
-        this.age--; // Zmniejsza wiek o 1
-    }
-
-    // Gettery i settery
-    public String getName() {
+    //tzw. "gettery" i "settery" pól prywatnych
+    public String getForename(){
         return forename;
     }
-
-    public void setName(String forename) {
+    public void setForename(String forename){
         this.forename = forename;
     }
-
-    public String getSurname() {
+    public String getSurname(){
         return surname;
     }
-
-    public void setSurname(String surname) {
+    public void setSurname(String surname){
         this.surname = surname;
+    }
+    public int getAge(){
+        return age;
+    }
+    public void setAge(int age){
+        this.age = age;
     }
 }
