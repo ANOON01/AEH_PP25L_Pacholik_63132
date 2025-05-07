@@ -1,7 +1,7 @@
 package pl.pp;
 import pl.pp.Person;
 
-public class mojaOsmaAplikacja {
+public class MojaOsmaAplikacja {
     public static void main(String[] args) {
         Person person1 = new Person("Test", "Testowy", 25); //nowy obiekt klasy Person
         person1.hiToAll(); //wywołanie metody hiToAll() z obiektu person1 klasy Person
