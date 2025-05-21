@@ -1,0 +1,17 @@
+# Sample Text File
+
+This is a sample text file used for testing input and output operations in Java.
+
+1. Line one
+2. Line two
+3. Line three
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+- Bullet point one
+- Bullet point two
+- Bullet point three
+
+End of file.
+ więcej tekstu ... jeszcze więcej tekstu ...
+ więcej tekstu dodane W LIŚCIE...
